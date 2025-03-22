@@ -186,7 +186,7 @@ namespace Server.Language
                 case 5:
                     return "A History of the " + BookType.ToString() + " Language";
 
-                default: return "A book on" + BookType.ToString() + " dialects";
+                default: return "A book on " + BookType.ToString() + " dialects";
             }
         }
 
@@ -286,7 +286,7 @@ namespace Server.Language
                         }
                         else
                         {
-                            p.SendMessage("You do not posess the level of understanding needed to speak that language.");
+                            p.SendMessage("You do not possess the level of understanding needed to speak that language.");
                         }
 
                         break;
@@ -301,7 +301,7 @@ namespace Server.Language
                         }
                         else
                         {
-                            p.SendMessage("You do not posess the level of understanding needed to speak that language.");
+                            p.SendMessage("You do not possess the level of understanding needed to speak that language.");
                         }
 
                         break;
@@ -316,7 +316,7 @@ namespace Server.Language
                         }
                         else
                         {
-                            p.SendMessage("You do not posess the level of understanding needed to speak that language.");
+                            p.SendMessage("You do not possess the level of understanding needed to speak that language.");
                         }
 
                         break;
@@ -331,7 +331,7 @@ namespace Server.Language
                         }
                         else
                         {
-                            p.SendMessage("You do not posess the level of understanding needed to speak that language.");
+                            p.SendMessage("You do not possess the level of understanding needed to speak that language.");
                         }
 
                         break;
@@ -341,12 +341,12 @@ namespace Server.Language
                     {
                         if (p.LevelofUnderstanding[(int)newLanguage] == 100)
                         {
-                            p.CurrentLanguage = PlayerMobile.PlayerLanguage.Tribal;
+                            p.CurrentLanguage = PlayerMobile.PlayerLanguage.Glyph;
                             p.SendMessage("You're now speaking in phonetic Glyph.");
                         }
                         else
                         {
-                            p.SendMessage("You do not posess the level of understanding needed to speak that language.");
+                            p.SendMessage("You do not possess the level of understanding needed to speak that language.");
                         }
 
                         break;
