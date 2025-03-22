@@ -251,8 +251,16 @@ namespace Server.Language
         }
     }
 
+    /// <summary>
+    /// Implements the Speak command that allows players to switch between languages.
+    /// </summary>
     public class SpeakCommand
     {
+        /// <summary>
+        /// Command handler for the Speak command.
+        /// Allows players to switch their speaking language if they have mastered it.
+        /// </summary>
+        /// <param name="args">Command event arguments</param>
         [CommandAttribute("Speak", AccessLevel.PlayerMobile)]
         public static void SayCommand_OnCommand(CommandEventArgs args)
         {
@@ -261,10 +269,12 @@ namespace Server.Language
             PlayerMobile.PlayerLanguage newLanguage;
             Enum.TryParse<PlayerMobile.PlayerLanguage>(text, true, out newLanguage);
 
+            // Debug output
             Console.WriteLine(newLanguage);
             Console.WriteLine((int)newLanguage);
             Console.WriteLine(p.LevelofUnderstanding[(int)newLanguage]);
 
+            // Handle each language type
             switch (newLanguage)
             {
                 case PlayerMobile.PlayerLanguage.Common:
@@ -341,7 +351,6 @@ namespace Server.Language
 
                         break;
                     }
-
             }
         }
     }
